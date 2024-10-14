@@ -7,6 +7,8 @@ import MainTheme from "@/themes/main.theme";
 
 export default function ActivityPage() {
   const { session, activeIndex, validated, isCorrect } = useSession();
+  if (!session) return <></>;
+
   const active = session ? session[activeIndex] : null;
   const question = {
     actual: activeIndex + 1,

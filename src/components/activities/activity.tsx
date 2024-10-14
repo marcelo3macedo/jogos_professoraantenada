@@ -28,6 +28,6 @@ export default function Activity({
     case ActionTypes.FINGER_CONTABLE:
       return <FingerContable question={question} session={session} />;
     default:
-      return <h1>teste</h1>;
+      return <></>;
   }
 }
