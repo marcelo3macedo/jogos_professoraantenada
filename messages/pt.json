@@ -1,0 +1,32 @@
+{
+  "activities": {
+    "question": "Pergunta",
+    "of": "de",
+    "completeSyllable": {
+      "title": "Qual sílaba está faltando?"
+    },
+    "createWord": {
+      "title": "Forma a palavra referente a:"
+    },
+    "identifyImages": {
+      "title": "Selecione a palavra referente a imagem"
+    },
+    "fingerContable": {
+      "title": "Qual a resposta desse cálculo?"
+    }
+  },
+  "completed": {
+    "title": "Parabéns! Você completou essa atividade",
+    "score": "Você acertou",
+    "answers": "perguntas",
+    "back": "Voltar"
+  },
+  "challenges": {
+    "title": "Meus desafios",
+    "subtitle": "Será que você consegue completar essas missões?"
+  },
+  "actions": {
+    "back": "Voltar",
+    "start": "Iniciar"
+  }
+}
