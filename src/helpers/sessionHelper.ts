@@ -75,8 +75,8 @@ function getType(configs: any) {
   let randomNumber = Math.random();
   let chooseType = configs[0].type;
 
-  for (let j = 0; j < configs.length; j++) {
-    const type = configs[j];
+  for (const element of configs) {
+    const type = element;
     if (randomNumber < type.possibility) {
       chooseType = type.type;
       break;
