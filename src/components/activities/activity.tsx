@@ -8,8 +8,8 @@ export default function Activity({
   session,
   question,
 }: {
-  session: any;
-  question: any;
+  readonly session: any;
+  readonly question: any;
 }) {
   const ActionTypes = {
     COMPLETE_SYLLABLE: "complete-syllable",

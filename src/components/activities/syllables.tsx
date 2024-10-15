@@ -3,8 +3,8 @@ export default function Syllables({
   syllables,
   missSyllable,
 }: {
-  syllables: any;
-  missSyllable: any;
+  readonly syllables: any;
+  readonly missSyllable: any;
 }) {
   return (
     <div className="flex">

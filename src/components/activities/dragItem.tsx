@@ -5,8 +5,8 @@ export default function DragItem({
   action,
   value,
 }: {
-  action: any;
-  value: string;
+  readonly action: any;
+  readonly value: string;
 }) {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 

@@ -1,4 +1,4 @@
 export interface IndexPage {
-  params: { slug: string };
-  searchParams: { [key: string]: string | string[] | undefined };
+  readonly params: { slug: string };
+  readonly searchParams: { [key: string]: string | string[] | undefined };
 }

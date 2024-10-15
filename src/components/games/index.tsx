@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Index({ game }: { game: GamesInfo }) {
+export default function Index({ game }: { readonly game: GamesInfo }) {
   const t = useTranslations("actions");
 
   return (

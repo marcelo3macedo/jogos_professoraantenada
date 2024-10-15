@@ -15,18 +15,7 @@ function handleCompleteSyllables(type: string, s: any, content: any) {
 }
 
 function getElementsToAdd(syllables: string[]) {
-  switch (syllables.length) {
-    case 1:
-      return 3;
-    case 2:
-      return 3;
-    case 3:
-      return 3;
-    case 4:
-      return 3;
-    default:
-      return 3;
-  }
+  return 3;
 }
 
 function getRandomElement(array: string[]): string {

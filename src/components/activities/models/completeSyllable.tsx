@@ -11,8 +11,8 @@ export default function CompleteSyllable({
   session,
   question,
 }: {
-  session: any;
-  question: any;
+  readonly session: any;
+  readonly question: any;
 }) {
   const t = useTranslations("activities.completeSyllable");
   const { selectAnswer } = useSession();
@@ -46,7 +46,7 @@ export default function CompleteSyllable({
       <div className="grid grid-cols-2 py-4 gap-2 content-center items-center justify-center">
         {session.possibilities.map((o: string) => {
           return (
-            <div
+            <button
               className="p-2 hover:opacity-70 hover:cursor-pointer select-none"
               key={o}
               onClick={() => {
@@ -56,7 +56,7 @@ export default function CompleteSyllable({
               <h2 className="bg-slate-100 text-slate-800 px-10 md:px-12 py-6 md:py-10 text-3xl md:text-5xl font-bold rounded-2xl text-center border-2 border-slate-800">
                 {o}
               </h2>
-            </div>
+            </button>
           );
         })}
       </div>

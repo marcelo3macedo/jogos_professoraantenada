@@ -1,4 +1,8 @@
-export default function DragResult({ syllables }: { syllables: string[] }) {
+export default function DragResult({
+  syllables,
+}: {
+  readonly syllables: string[];
+}) {
   return (
     <div className="bg-slate-200 flex py-6 px-8 items-center justify-center min-w-72 md:min-w-96 h-20 rounded-lg">
       {syllables.map((s) => (

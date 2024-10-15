@@ -4,8 +4,8 @@ export default function OptionsPage({
   options,
   action,
 }: {
-  options: string[];
-  action: any;
+  readonly options: string[];
+  readonly action: any;
 }) {
   if (!options) return [];
 

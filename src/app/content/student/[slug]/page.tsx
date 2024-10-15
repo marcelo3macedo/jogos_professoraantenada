@@ -4,7 +4,7 @@ import { IndexPage } from "@/interfaces/page";
 import SingleDetails from "@/components/games/single/details";
 import useSession from "@/hooks/useSession";
 
-export default function StudentPage({ params }: IndexPage) {
+export default function StudentPage({ params }: Readonly<IndexPage>) {
   const { slug } = params || {};
   const { handleActivityStart } = useSession();
 

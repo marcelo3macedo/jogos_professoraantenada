@@ -55,7 +55,7 @@ export default function SelectImage({ question, slug, word, options }: any) {
         <div className="grid grid-cols-2 py-4 gap-2 content-center items-center justify-center">
           {options.map((o: string) => {
             return (
-              <div
+              <button
                 className="p-2 hover:opacity-70 hover:cursor-pointer select-none"
                 key={o}
                 onClick={() => {
@@ -69,7 +69,7 @@ export default function SelectImage({ question, slug, word, options }: any) {
                   alt=""
                   className="mx-auto w-32 md:w-52 rounded-2xl my-2 md:my-4"
                 />
-              </div>
+              </button>
             );
           })}
         </div>

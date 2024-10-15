@@ -7,8 +7,8 @@ export default function SingleDetails({
   slug,
   action,
 }: {
-  slug: string;
-  action: any;
+  readonly slug: string;
+  readonly action: any;
 }) {
   const t = useTranslations("actions");
   const { title, description } =
@@ -32,7 +32,7 @@ export default function SingleDetails({
         </h3>
       </div>
       <div>
-        <a
+        <button
           onClick={action}
           className="select-none hover:cursor-pointer hover:opacity-80 active:top-1 active:relative"
         >
@@ -41,7 +41,7 @@ export default function SingleDetails({
               {t("start")}
             </span>
           </div>
-        </a>
+        </button>
       </div>
     </div>
   );

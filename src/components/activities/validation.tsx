@@ -3,7 +3,11 @@ import correct from "@/assets/animations/correct.json";
 import error from "@/assets/animations/error.json";
 import LottieAnimation from "../animations/lottie";
 
-export default function Validation({ isCorrect }: { isCorrect: boolean }) {
+export default function Validation({
+  isCorrect,
+}: {
+  readonly isCorrect: boolean;
+}) {
   const animation = isCorrect ? correct : error;
   const message = isCorrect
     ? "Parabéns! Você acertou"

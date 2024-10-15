@@ -13,8 +13,8 @@ export default function CreateWord({
   session,
   question,
 }: {
-  session: any;
-  question: any;
+  readonly session: any;
+  readonly question: any;
 }) {
   const t = useTranslations("activities.createWord");
   const { selectAnswer } = useSession();

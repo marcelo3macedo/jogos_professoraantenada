@@ -2,7 +2,7 @@
 import { useTranslations } from "next-intl";
 import { Question } from "./activitiesProps";
 
-export default function ActiveQuestion({ actual, total }: Question) {
+export default function ActiveQuestion({ actual, total }: Readonly<Question>) {
   const t = useTranslations("activities");
 
   return (

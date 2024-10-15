@@ -1,4 +1,4 @@
-export default function HeaderInfo({ title, subtitle }: HeaderInfo) {
+export default function HeaderInfo({ title, subtitle }: Readonly<HeaderInfo>) {
   return (
     <div className="text-center">
       <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl ">
