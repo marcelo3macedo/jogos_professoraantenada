@@ -3,7 +3,7 @@ import Activity from "@/components/activities/activity";
 import Completed from "@/components/activities/completed";
 import Validation from "@/components/activities/validation";
 import useSession from "@/hooks/useSession";
-import MainTheme from "@/themes/main.theme";
+import ActivityTheme from "@/themes/activity.theme";
 
 export default function ActivityPage() {
   const { session, activeIndex, validated, isCorrect } = useSession();
@@ -21,14 +21,14 @@ export default function ActivityPage() {
 
   if (!active && session && activeIndex === session.length)
     return (
-      <MainTheme>
+      <ActivityTheme>
         <Completed />
-      </MainTheme>
+      </ActivityTheme>
     );
 
   return (
-    <MainTheme>
+    <ActivityTheme>
       <Activity session={active} question={question} />
-    </MainTheme>
+    </ActivityTheme>
   );
 }
