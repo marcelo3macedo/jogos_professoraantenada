@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Educational Games Section for Preschool Teachers
 
-## Getting Started
+This project is a microfrontend section for an educational blog designed for preschool teachers, offering a variety of interactive games aimed at young students. The games focus on foundational skills such as math, language, and visual identification to enhance early childhood education.
 
-First, run the development server:
+## Code Techs
 
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
+
+## SonarCloud Analysis
+
+![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=marcelo3macedo_jogos_professoraantenada&metric=alert_status)
+![Bugs](https://sonarcloud.io/api/project_badges/measure?project=marcelo3macedo_jogos_professoraantenada&metric=bugs)
+![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=marcelo3macedo_jogos_professoraantenada&metric=code_smells)
+![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=marcelo3macedo_jogos_professoraantenada&metric=vulnerabilities)
+![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=marcelo3macedo_jogos_professoraantenada&metric=sqale_index)
+![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=marcelo3macedo_jogos_professoraantenada&metric=reliability_rating)
+![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=marcelo3macedo_jogos_professoraantenada&metric=security_rating)
+![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=marcelo3macedo_jogos_professoraantenada&metric=sqale_rating)
+![Duplicated Lines](https://sonarcloud.io/api/project_badges/measure?project=marcelo3macedo_jogos_professoraantenada&metric=duplicated_lines_density)
+
+## Features
+
+- **Math Games**: Counting fingers, number matching, and more.
+- **Language Games**: Syllable selection, word formation.
+- **Visual Identification**: Match and identify images.
+- **Internationalization**: Multilingual support using `next-intl`.
+
+
+## Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+    git clone https://github.com/marcelo3macedo/jogos_professoraantenada.git
+    cd jogos_professoraantenada
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+    npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Run the development server:
+```bash
+    npm run dev
+```
 
-## Learn More
+## Run with Docker Image:
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+    docker run -p 3000:3000 marcelo3macedo/jogos_professoraantenada:latest
+```
