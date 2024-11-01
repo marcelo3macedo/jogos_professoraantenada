@@ -6,7 +6,6 @@ export default function Search() {
           type="search"
           className="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           placeholder="Buscar..."
-          value=""
           name="s"
         />
         <button type="submit" className="absolute top-0 right-0 mt-2 mr-4">
