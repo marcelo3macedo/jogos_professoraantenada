@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Lato } from "next/font/google";
+import { Baloo_2 } from "next/font/google";
 import "./globals.css";
 import messages from "../../messages/pt.json";
 
-const lato = Lato({ subsets: ["latin"], weight: ["400", "700"] });
+const ballo = Baloo_2({ subsets: ["latin"], weight: ["400", "700"] });
 
 import { metadataContent } from "@/data/metadata";
 import { NextIntlClientProvider } from "next-intl";
@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <NextIntlClientProvider messages={messages}>
       <html lang="pt-BR">
-        <body className={lato.className}>{children}</body>
+        <body className={ballo.className}>{children}</body>
       </html>
     </NextIntlClientProvider>
   );
