@@ -12,9 +12,9 @@ export default function Bar() {
     <footer className="bg-gray-900">
       <div className="container mx-auto">
         <div className="p-4">
-          {menu.map((m, i) => (
+          {menu.map((m) => (
             <a
-              key={i}
+              key={m.title}
               href={m.url}
               className="block px-3 font-bold py-2 text-gray-100 rounded-lg hover:opacity-80"
             >
