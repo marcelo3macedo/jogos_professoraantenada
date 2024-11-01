@@ -3,6 +3,7 @@ import { useRouter } from "next/navigation";
 import { generate } from "@/helpers/sessionHelper";
 import { StoreState } from "@/interfaces/store";
 import useStore from "@/store/useStore";
+import { PlaySound } from "@/helpers/soundHelper";
 
 const useSession = () => {
   const router = useRouter();
@@ -33,6 +34,11 @@ const useSession = () => {
       const newCorrectAnswers = correctAnswers + 1;
       setCorrectAnswers(newCorrectAnswers);
     }
+
+    const soundUrl = isCorrect
+      ? "/jogos/audios/correct.mp3"
+      : "/jogos/audios/incorrect.mp3";
+    PlaySound(soundUrl);
 
     const newActiveIndex = activeIndex + 1;
     setActiveIndex(newActiveIndex);
