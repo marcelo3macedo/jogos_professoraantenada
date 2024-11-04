@@ -23,6 +23,10 @@ const nextConfig = {
         source: "/atividades/atividade",
         destination: "/activities/activity",
       },
+      {
+        source: "/trofeus",
+        destination: "/trophies",
+      },
     ];
   },
 };

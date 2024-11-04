@@ -14,6 +14,13 @@ export function PlayBackgroundSound(audioUrl: string, loop: boolean = false) {
   });
 }
 
+export function StopBackgroundSound() {
+  if (audioInstance) {
+    audioInstance.pause();
+    audioInstance.currentTime = 0;
+  }
+}
+
 export function PlaySound(audioUrl: string, loop: boolean = false) {
   const audio = new Audio(audioUrl);
   audio.loop = loop;

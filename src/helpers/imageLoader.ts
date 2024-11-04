@@ -57,3 +57,13 @@ export const getFingerSrc = (imageName: string) => {
     return "";
   }
 };
+
+export const getTrophySrc = (imageName: string) => {
+  try {
+    const image = require(`@/assets/img/trophies/${imageName}.jpg`);
+    return image ? image.default : "";
+  } catch (err) {
+    console.error("Error loading image:", err);
+    return "";
+  }
+};

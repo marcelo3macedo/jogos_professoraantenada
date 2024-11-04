@@ -19,6 +19,7 @@
     "title": "Parabéns! Você completou essa atividade",
     "score": "Você acertou",
     "answers": "perguntas",
+    "points": "pontos",
     "back": "Voltar"
   },
   "challenges": {
@@ -28,5 +29,52 @@
   "actions": {
     "back": "Voltar",
     "start": "Iniciar"
+  },
+  "trophies": {
+    "title": "Minhas Conquistas",
+    "subtitle": "Galeria de conquistas desbloqueadas",
+    "conquered": "Conquistado em:",
+    "points": "pontos",
+    "level": "Seu nível",
+    "starting": "Iniciante",
+    "trophies": "Ver troféus",
+    "types": {
+      "locked": {
+          "title": "Bloqueado",
+          "description": "Você ainda não conquistou esse troféu."
+      },
+      "novice": {
+          "title": "Novato",
+          "description": "Bem-vindo! Você está dando os primeiros passos em sua jornada de aprendizado."
+      },
+      "explorer": {
+          "title": "Explorador",
+          "description": "Você está começando a se aventurar e explorar novos conhecimentos. Continue em frente!"
+      },
+      "adventurer": {
+          "title": "Aventureiro",
+          "description": "Com coragem, você avança em novos desafios e está aprendendo cada vez mais!"
+      },
+      "guardian": {
+          "title": "Guardião",
+          "description": "Sua dedicação fez de você um protetor do conhecimento. Continue para se tornar ainda mais sábio."
+      },
+      "brave": {
+          "title": "Valente",
+          "description": "Você enfrentou vários desafios com bravura. Nada pode te parar agora!"
+      },
+      "hero": {
+          "title": "Herói",
+          "description": "Você é um verdadeiro herói do aprendizado, sempre pronto para superar qualquer obstáculo."
+      },
+      "master": {
+          "title": "Mestre",
+          "description": "Com conhecimento e experiência, você atingiu o nível de mestre. Parabéns pela sua jornada!"
+      },
+      "ninja": {
+          "title": "Ninja",
+          "description": "Silencioso, ágil e sábio. Você se tornou um ninja do conhecimento, alcançando o mais alto nível!"
+      }
+    }  
   }
 }
