@@ -21,7 +21,7 @@ const useUser = () => {
           ? trophy
           : highest;
       },
-      { requiredPoints: 0 },
+      { requiredPoints: 0, name: "" },
     );
   }
 
