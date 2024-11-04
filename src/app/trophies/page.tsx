@@ -1,5 +1,4 @@
 import Trophies from "@/components/gamification/list";
-import Trophy from "@/components/gamification/trophy";
 import HeaderInfo from "@/components/header/info";
 import MainTheme from "@/themes/main.theme";
 import { useTranslations } from "next-intl";

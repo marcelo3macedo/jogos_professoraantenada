@@ -15,9 +15,14 @@ const useUser = () => {
       return null;
     }
 
-    return unlockedTrophies.reduce((highest, trophy) => {
-      return trophy.requiredPoints > highest.requiredPoints ? trophy : highest;
-    });
+    return unlockedTrophies.reduce(
+      (highest, trophy) => {
+        return trophy.requiredPoints > highest.requiredPoints
+          ? trophy
+          : highest;
+      },
+      { requiredPoints: 0 },
+    );
   }
 
   return {

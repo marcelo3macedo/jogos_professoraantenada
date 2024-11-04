@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import TrophyLocked from "./locked";
 
-export default function Trophy({ trophy }: { trophy: any }) {
+export default function Trophy({ trophy }: { readonly trophy: any }) {
   const t = useTranslations("trophies");
 
   if (!trophy.unlocked) {

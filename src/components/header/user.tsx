@@ -9,9 +9,8 @@ export default function UserInfo() {
   const t = useTranslations("trophies");
   const { getHighestUnlockedTrophy, points } = useUser();
   const trophy = getHighestUnlockedTrophy();
-  const level =
-    trophy && trophy.name ? t(`types.${trophy.name}.title`) : t("starting");
-  const image = trophy && trophy.name ? trophy.name : "novice";
+  const level = trophy?.name ? t(`types.${trophy.name}.title`) : t("starting");
+  const image = trophy?.name ? trophy.name : "novice";
 
   return (
     <div className="max-w-2xl mx-4 sm:max-w-sm md:max-w-sm lg:max-w-sm xl:max-w-sm sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto bg-white shadow-xl rounded-lg text-gray-900">
