@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "novice",
+        "requiredPoints": 100
+    },
+    {
+        "id": 2,
+        "name": "explorer",
+        "requiredPoints": 1000
+    },
+    {
+        "id": 3,
+        "name": "adventurer",
+        "requiredPoints": 2000
+    },
+    {
+        "id": 4,
+        "name": "guardian",
+        "requiredPoints": 5000
+    },
+    {
+        "id": 5,
+        "name": "brave",
+        "requiredPoints": 7000
+    },
+    {
+        "id": 6,
+        "name": "hero",
+        "requiredPoints": 10000
+    },
+    {
+        "id": 7,
+        "name": "master",
+        "requiredPoints": 12000
+    },
+    {
+        "id": 8,
+        "name": "ninja",
+        "requiredPoints": 15000
+    }
+]

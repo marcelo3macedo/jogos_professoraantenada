@@ -14,7 +14,7 @@ export default function Validation({
     : "Que pena, você errou!";
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center">
+    <div className="w-full h-svh flex flex-col items-center justify-center">
       <LottieAnimation animationData={animation} />
       <h2 className="mt-4 font-bold text-2xl text-slate-600">{message}</h2>
     </div>

@@ -2,7 +2,10 @@
 import Activity from "@/components/activities/activity";
 import Completed from "@/components/activities/completed";
 import Validation from "@/components/activities/validation";
-import { PlayBackgroundSound } from "@/helpers/soundHelper";
+import {
+  PlayBackgroundSound,
+  StopBackgroundSound,
+} from "@/helpers/soundHelper";
 import useSession from "@/hooks/useSession";
 import ActivityTheme from "@/themes/activity.theme";
 import { useEffect } from "react";
@@ -12,6 +15,10 @@ export default function ActivityPage() {
 
   useEffect(() => {
     PlayBackgroundSound("/jogos/audios/music.mp3", true);
+
+    return () => {
+      StopBackgroundSound();
+    };
   }, []);
 
   if (!session) return <></>;

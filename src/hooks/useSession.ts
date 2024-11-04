@@ -13,6 +13,8 @@ const useSession = () => {
     setValidated,
     setCorrectAnswers,
     setIsCorrect,
+    setPoints,
+    points,
     session,
     activeIndex,
     correctAnswers,
@@ -32,7 +34,10 @@ const useSession = () => {
   function selectAnswer(isCorrect: boolean) {
     if (isCorrect) {
       const newCorrectAnswers = correctAnswers + 1;
+      const newPoints = 10 + points;
+
       setCorrectAnswers(newCorrectAnswers);
+      setPoints(newPoints);
     }
 
     const soundUrl = isCorrect
@@ -50,8 +55,13 @@ const useSession = () => {
     }, 5000);
   }
 
+  function getPointsEarned() {
+    return correctAnswers * 10;
+  }
+
   return {
     handleActivityStart,
+    getPointsEarned,
     selectAnswer,
     session,
     activeIndex,
