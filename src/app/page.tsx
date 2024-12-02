@@ -1,25 +1,17 @@
-import MainTheme from "@/themes/main.theme";
-import HeaderInfo from "@/components/header/info";
-import { useTranslations } from "next-intl";
-import List from "@/components/games/list";
-import UserInfo from "@/components/header/user";
+import { METADATATYPE_HOME } from "@/constants/metadataType";
+import { getMetadata } from "@/helpers/metadata/metadataHelper";
+import { getMenuItems } from "@/lib/wordpress/categories";
+import { getLatestPosts } from "@/lib/wordpress/posts";
+import BaseTheme from "@/themes/base.theme";
 
-export default function Home() {
-  const t = useTranslations("challenges");
+export const metadata = getMetadata(METADATATYPE_HOME);
 
-  return (
-    <MainTheme>
-      <div className="container px-6 py-5 mx-auto md:mt-4">
-        <div className="md:flex items-center">
-          <div className="w-full md:w-4/5">
-            <HeaderInfo title={t("title")} subtitle={t("subtitle")} />
-          </div>
-          <div className="w-full my-8 md:my-0 md:w-1/5">
-            <UserInfo />
-          </div>
-        </div>
-        <List />
-      </div>
-    </MainTheme>
-  );
+export default async function Home() {
+  const [metadata, posts, menu] = await Promise.all([
+    getMetadata(METADATATYPE_HOME),
+    getLatestPosts(),
+    getMenuItems("tg-home-page-categories"),
+  ]);
+
+  return <BaseTheme>{JSON.stringify(posts)}</BaseTheme>;
 }
