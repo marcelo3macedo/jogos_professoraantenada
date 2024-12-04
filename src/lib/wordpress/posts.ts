@@ -3,6 +3,7 @@ import { db } from "@/lib/wordpress/db";
 import { RowDataPacket } from "mysql2";
 import { redis } from "../redis";
 import { CACHE_TTL } from "@/constants/cache";
+import { getImage } from "@/helpers/posts/image";
 
 export async function getLatestPosts(page = 1, limit = 12) {
   const cacheKey = `latestPosts:page:${page}:limit:${limit}`;
@@ -18,7 +19,7 @@ export async function getLatestPosts(page = 1, limit = 12) {
               p.post_date,
               p.post_excerpt,
               p.post_content,
-              p.guid AS post_url,
+              p.guid AS post_slug,
               pm2.guid AS featured_image_url
           FROM 
               wordpress_posts p
@@ -47,7 +48,7 @@ export async function getLatestPosts(page = 1, limit = 12) {
       title: post.post_title,
       slug: post.post_slug,
       excerpt: getExcerpt(post.post_excerpt, post.post_content),
-      featured_image_url: post.featured_image_url,
+      featured_image_url: getImage(post.featured_image_url),
       date: post.post_date,
     })),
     pagination: {

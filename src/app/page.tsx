@@ -1,3 +1,4 @@
+import NewsPosts from "@/components/posts/news";
 import { METADATATYPE_HOME } from "@/constants/metadataType";
 import { getMetadata } from "@/helpers/metadata/metadataHelper";
 import { getMenuItems } from "@/lib/wordpress/categories";
@@ -13,5 +14,9 @@ export default async function Home() {
     getMenuItems("tg-home-page-categories"),
   ]);
 
-  return <BaseTheme>{JSON.stringify(posts)}</BaseTheme>;
+  return (
+    <BaseTheme>
+      <NewsPosts content={posts} />
+    </BaseTheme>
+  );
 }

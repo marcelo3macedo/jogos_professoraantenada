@@ -1,4 +1,16 @@
 {
+  "blog": {
+    "home": {
+      "news": "Novidades",
+      "post": {
+        "title": "Título",
+        "description": "Descrição"
+      }
+    }
+  },
+  "seo": {
+    "title": "Teste PA"
+  },
   "activities": {
     "question": "Pergunta",
     "of": "de",

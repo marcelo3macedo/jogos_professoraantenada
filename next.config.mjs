@@ -3,8 +3,6 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin();
 
 const nextConfig = {
-  basePath: "/jogos",
-  assetPrefix: "/jogos",
   async rewrites() {
     return [
       {
@@ -28,6 +26,9 @@ const nextConfig = {
         destination: "/trophies",
       },
     ];
+  },
+  images: {
+    domains: ["professoraantenada.com.br"],
   },
 };
 
