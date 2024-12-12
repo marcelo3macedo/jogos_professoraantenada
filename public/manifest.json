@@ -1,0 +1,36 @@
+{
+    "name": "Professora Antenada",
+    "short_name": "ProfessoraAntenadaApp",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#fef9c3",
+    "theme_color": "#2e1065",
+    "icons": [
+      {
+        "src": "img/icons/icon-32x32.png",
+        "sizes": "32x32",
+        "type": "image/png"
+      },
+      {
+        "src": "img/icons/icon-76x76.png",
+        "sizes": "76x76",
+        "type": "image/png"
+      },
+      {
+        "src": "img/icons/icon-128x128.png",
+        "sizes": "128x128",
+        "type": "image/png"
+      },
+      {
+        "src": "img/icons/icon-256x256.png",
+        "sizes": "256x256",
+        "type": "image/png"
+      },
+      {
+        "src": "img/icons/icon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  
