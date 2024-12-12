@@ -8,9 +8,21 @@ export const metadataContent: Metadata = {
       url: "https://professoraantenada.com.br",
     },
   ],
+  icons: {
+    icon: [
+      { url: "/img/icons/icon-128x128.png", sizes: "128x128" },
+      { url: "/img/icons/icon-256x256.png", sizes: "256x256" },
+      { url: "/img/icons/icon-512x512.png", sizes: "512x512" },
+    ],
+    apple: "/img/icons/icon-128x128.png",
+    shortcut: "/img/icons/icon-128x128.png",
+  },
   generator: "Professora Antenada",
   referrer: "origin",
-  themeColor: "#f9a8d4",
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)", color: "#2e1065" },
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+  ],
   colorScheme: "light",
   viewport: {
     width: "device-width",
@@ -22,6 +34,9 @@ export const metadataContent: Metadata = {
   robots: {
     follow: true,
     index: true,
+    "max-snippet": -1,
+    "max-image-preview": "large",
+    "max-video-preview": -1,
   },
   alternates: {
     canonical: "https://professoraantenada.com.br",
@@ -45,7 +60,19 @@ export const metadataContent: Metadata = {
     siteName: "Professora Antenada",
     images: [
       {
-        url: "https://professoraantenada.com.br/logo.png",
+        url: "https://professoraantenada.com.br/img/icons/icon-128x128.png",
+        width: 128,
+        height: 128,
+      },
+      {
+        url: "https://professoraantenada.com.br/img/icons/icon-256x256.png",
+        width: 256,
+        height: 256,
+      },
+      {
+        url: "https://professoraantenada.com.br/img/icons/icon-512x512.png",
+        width: 512,
+        height: 512,
       },
     ],
   },
@@ -53,7 +80,7 @@ export const metadataContent: Metadata = {
     card: "summary_large_image",
     site: "@site",
     creator: "@creator",
-    images: "https://professoraantenada.com.br/logo.png",
+    images: "https://professoraantenada.com.br/img/icons/icon-128x128.png",
   },
   verification: {
     google: "tFdcpznLCzvIod9E3mKF-ieBu31t6aE8FHHLBWToHAg",
@@ -71,4 +98,10 @@ export const metadataContent: Metadata = {
   archives: "https://professoraantenada.com.br/archives",
   category: "Educação Infantil",
   classification: "Professores Infantil",
+  keywords: [
+    "educação infantil",
+    "atividades escolares",
+    "materiais educativos",
+    "dicas para professores",
+  ],
 };

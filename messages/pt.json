@@ -6,10 +6,15 @@
         "title": "Título",
         "description": "Descrição"
       }
+    },
+    "categories": {
+      "title": "Categorias"
+    },
+    "seo": {
+      "title": "Professora antenada - Sempre antenada sobre Educação",
+      "description": "Página criada para educadores(as).Informações, dicas e materiais para auxílio da rotina docente",
+      "keywords": "Educação Infantil, Atividade Infantil, Ensino Religioso, Atividades Lúdicas, Estratégias de Ensino, Plano de Aula, Festividades"
     }
-  },
-  "seo": {
-    "title": "Teste PA"
   },
   "activities": {
     "question": "Pergunta",

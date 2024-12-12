@@ -3,12 +3,12 @@ import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 export async function getHomeMetadata() {
   const t = await getTranslations({
     locale: "pt",
-    namespace: "seo",
+    namespace: "blog.seo",
   });
 
   return {
     title: t("title"),
-    description: "",
-    keywords: "",
+    description: t("description"),
+    keywords: t("keywords"),
   };
 }
