@@ -1,12 +1,7 @@
-export default function Bar() {
-  const copyright =
-    "Copyright 2021 Todos os direitos reservados. Professora Antenada";
-  const menu = [
-    { title: "Sobre", url: "/sobre" },
-    { title: "Sugestões", url: "/sugestoes" },
-    { title: "Categorias", url: "/categorias" },
-    { title: "Política de privacidade", url: "/politicas-privacidade" },
-  ];
+import { getFooterData } from "@/services/blog/footer";
+
+export default async function FooterBar() {
+  const { copyright, menu } = await getFooterData();
 
   return (
     <footer className="bg-gray-900">
