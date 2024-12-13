@@ -1,6 +1,11 @@
 export default function Search() {
   return (
-    <form role="search" method="get" className="search-form pb-2" action="/">
+    <form
+      role="search"
+      method="get"
+      className="search-form pb-2"
+      action="/pesquisa"
+    >
       <div className="relative">
         <input
           type="search"
@@ -8,7 +13,7 @@ export default function Search() {
           placeholder="Buscar..."
           name="s"
         />
-        <button type="submit" className="absolute top-0 right-0 mt-2 mr-4">
+        <button type="submit" className="absolute top-0 right-0 mt-2 mr-10">
           <svg
             className="w-6 h-6 text-gray-600 hover:text-blue-500"
             fill="none"

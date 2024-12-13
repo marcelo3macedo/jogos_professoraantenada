@@ -25,6 +25,10 @@ const nextConfig = {
         source: "/trofeus",
         destination: "/trophies",
       },
+      {
+        source: "/pesquisa",
+        destination: "/search",
+      },
     ];
   },
   images: {
