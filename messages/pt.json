@@ -17,6 +17,32 @@
       "title": "Professora antenada - Sempre antenada sobre Educação",
       "description": "Página criada para educadores(as).Informações, dicas e materiais para auxílio da rotina docente",
       "keywords": "Educação Infantil, Atividade Infantil, Ensino Religioso, Atividades Lúdicas, Estratégias de Ensino, Plano de Aula, Festividades"
+    },
+    "notFound": {
+      "title": "Página não encontrada",
+      "message": "Puxa, parece que você chegou a um cantinho do site que ainda não exploramos!",
+      "details": "Não se preocupe, temos muitos recursos e ideias incríveis para você. Vamos ajudar você a encontrar o que precisa:",
+      "actions": {
+        "back": "Voltar",
+        "home": "Ir para página inicial"
+      },
+      "options": {
+        "messages": {
+          "title": "Lembrancinhas e Mensagens",
+          "description": "Veja nossas lembrancinhas para imprimir",
+          "action": "Ver lembrancinhas"
+        },
+        "learning": {
+          "title": "Alfabetização",
+          "description": "Confira nossas atividades para auxiliar na sala de aula",
+          "action": "Ir para atividades"
+        },
+        "contact": {
+          "title": "Fale conosco",
+          "description": "Não encontrou o que procurava?",
+          "action": "Ir para falar conosco"
+        }
+      }
     }
   },
   "activities": {
