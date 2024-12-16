@@ -1,33 +1,48 @@
-import { db } from "@/lib/wordpress/db";
+import { getLimitAndOffset } from "@/helpers/pagination/list";
+import { Category } from "@/interfaces/blog/category";
+import { Post } from "@/interfaces/blog/posts";
+import { queryDatabase } from "@/lib/wordpress/db";
 
-export async function getMenuItems(menuLocation: string) {
-  const [menu] = await db.query(
-    `SELECT t.term_id
-     FROM wordpress_terms t
-     INNER JOIN wordpress_term_taxonomy tt ON t.term_id = tt.term_id
-     WHERE tt.taxonomy = 'nav_menu' AND t.name = ?`,
-    [menuLocation],
-  );
+import {
+  QUERY_CATEGORIES_CHILDREN,
+  QUERY_CATEGORIES_POSTS,
+  QUERY_CATEGORIES_POSTS_COUNTER,
+  QUERY_CATEGORIES_SINGLE,
+} from "./queries/categories";
 
-  if (!menu.length) {
-    return [];
-  }
+export async function getCategoriesChildren(id: string): Promise<Category[]> {
+  return (await queryDatabase(QUERY_CATEGORIES_CHILDREN, [id])) as Category[];
+}
 
-  const menuId = menu[0].term_id;
+export async function getSingleCategory(
+  slug: string,
+  page: string,
+): Promise<Category | undefined> {
+  if (!slug) return;
 
-  const [menuItems] = await db.query(
-    `SELECT p.ID, p.post_title, pm.meta_value AS url
-     FROM wordpress_posts p
-     INNER JOIN wordpress_postmeta pm ON p.ID = pm.post_id
-     INNER JOIN wordpress_term_relationships tr ON p.ID = tr.object_id
-     WHERE tr.term_taxonomy_id = ? AND p.post_type = 'nav_menu_item' AND pm.meta_key = '_menu_item_url'
-     ORDER BY p.menu_order ASC`,
-    [menuId],
-  );
+  const { limit, offset } = getLimitAndOffset(page);
+  const [category] = (await queryDatabase(QUERY_CATEGORIES_SINGLE, [
+    slug,
+  ])) as Category[];
+  const items = (await queryDatabase(QUERY_CATEGORIES_POSTS, [
+    slug,
+    limit.toString(),
+    offset.toString(),
+  ])) as Post[];
+  const [totalPosts] = (await queryDatabase(QUERY_CATEGORIES_POSTS_COUNTER, [
+    slug,
+  ])) as any;
 
-  return menuItems.map((item) => ({
-    id: item.ID,
-    title: item.post_title,
-    url: item.url,
-  }));
+  const { termId, name, description } = category;
+  return {
+    termId,
+    slug,
+    name,
+    description,
+    posts: {
+      items,
+      limit,
+      total: totalPosts.total,
+    },
+  };
 }

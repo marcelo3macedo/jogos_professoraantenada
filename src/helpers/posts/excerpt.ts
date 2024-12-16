@@ -10,6 +10,8 @@ export function getExcerptFromContent(
   content: string,
   wordsCounter: number = 25,
 ) {
+  if (!content) return;
+
   const plainText = content
     .replace(/<\/?[^>]+(>|$)/g, "")
     .replace(/\n/g, " ")
