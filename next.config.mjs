@@ -29,10 +29,14 @@ const nextConfig = {
         source: "/pesquisa",
         destination: "/search",
       },
+      {
+        source: "/blog/categoria/:slug",
+        destination: "/blog/category/:slug",
+      },
     ];
   },
   images: {
-    domains: ["professoraantenada.com.br"],
+    domains: ["localhost", "professoraantenada.com.br"],
   },
 };
 

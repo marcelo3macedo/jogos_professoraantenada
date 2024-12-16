@@ -8,7 +8,15 @@
       }
     },
     "categories": {
-      "title": "Categorias"
+      "title": "Categorias",
+      "types": {
+        "title": "Título",
+        "description": "Descrição"
+      }
+    },
+    "pagination": {
+      "previous": "Página Anterior",
+      "next": "Próxima Página"
     },
     "search": {
       "queried": "Você buscou por"

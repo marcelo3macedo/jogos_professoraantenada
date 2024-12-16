@@ -8,3 +8,16 @@ export const pool = mysql.createPool({
   connectionLimit: 10,
   waitForConnections: true,
 });
+
+export const queryDatabase = async (query: string, params: any = []) => {
+  const connection = await pool.getConnection();
+  try {
+    const [rows] = await connection.execute(query, params);
+    return rows;
+  } catch (error) {
+    console.error("Database query failed:", error);
+    throw error;
+  } finally {
+    connection.release();
+  }
+};
