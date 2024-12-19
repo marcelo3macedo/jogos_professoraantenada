@@ -1,5 +1,6 @@
-import { metadataContent } from "./base";
 import { METADATATYPE_HOME } from "@/constants/metadataType";
+
+import { metadataContent } from "./base";
 import { getHomeMetadata } from "./home";
 
 export async function getMetadata(origin: string) {

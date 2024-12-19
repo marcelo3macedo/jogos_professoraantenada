@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useTranslations } from "next-intl";
 
 import notFoundImage from "@/assets/img/notFound.jpg";
@@ -15,7 +16,7 @@ export default function Item({ post }: { post: Post }) {
     : notFoundImage.src;
 
   return (
-    <a
+    <Link
       href={post.url}
       className="block rounded-lg p-4 shadow-sm bg-slate-50 shadow-indigo-100"
     >
@@ -42,6 +43,6 @@ export default function Item({ post }: { post: Post }) {
           </div>
         </dl>
       </div>
-    </a>
+    </Link>
   );
 }

@@ -1,8 +1,9 @@
-import MainTheme from "@/themes/main.theme";
-import HeaderInfo from "@/components/header/info";
 import { useTranslations } from "next-intl";
+
 import List from "@/components/games/list";
+import HeaderInfo from "@/components/header/info";
 import UserInfo from "@/components/header/user";
+import MainTheme from "@/themes/main.theme";
 
 export default function Home() {
   const t = useTranslations("challenges");

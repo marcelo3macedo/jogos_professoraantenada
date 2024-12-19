@@ -15,7 +15,7 @@ export default function Navbar() {
   return (
     <nav className="bg-violet-950 shadow w-full">
       <div className="container py-4 pt-2 md:pt-4 mx-auto">
-        <div className="lg:flex lg:items-center lg:justify-center w-full">
+        <div className="lg:flex lg:items-center lg:justify-between w-full">
           <div className="flex items-center justify-between mx-2">
             <Link href="/">
               <Image

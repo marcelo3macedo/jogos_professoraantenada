@@ -2,6 +2,7 @@ import { JSDOM } from "jsdom";
 
 interface Block {
   type: string;
+  tag?: string;
   content?: string | string[];
   src?: string;
   href?: string;
@@ -9,7 +10,7 @@ interface Block {
   provider?: string;
   className?: string;
   alt?: string;
-  images?: string[];
+  images?: any;
 }
 
 export function htmlStringToArray(htmlString: string): Block[] {
@@ -31,7 +32,11 @@ export function htmlStringToArray(htmlString: string): Block[] {
         case "h4":
         case "h5":
         case "h6":
-          blocks.push({ type: "heading", content: element.textContent || "" });
+          blocks.push({
+            type: "heading",
+            tag: element.tagName.toLowerCase(),
+            content: element.textContent || "",
+          });
           break;
 
         case "p":
@@ -50,6 +55,20 @@ export function htmlStringToArray(htmlString: string): Block[] {
         }
 
         case "figure": {
+          const images = Array.from(element.querySelectorAll("img")).map(
+            (img) => ({
+              type: "image",
+              src: img.getAttribute("src") || "",
+              alt: img.getAttribute("alt") || "",
+            }),
+          );
+          if (images.length > 1) {
+            return blocks.push({
+              type: "gallery",
+              images: images,
+            });
+          }
+
           const img = element.querySelector("img");
           if (img) {
             blocks.push({
@@ -83,7 +102,10 @@ export function htmlStringToArray(htmlString: string): Block[] {
         default: {
           if (element.classList.contains("wp-block-gallery")) {
             const images = Array.from(element.querySelectorAll("img")).map(
-              (img) => img.getAttribute("src") || "",
+              (img) => ({
+                src: img.getAttribute("src") || "",
+                alt: img.getAttribute("alt") || "",
+              }),
             );
             blocks.push({ type: "gallery", images });
           } else if (element.classList.contains("wp-block-embed")) {

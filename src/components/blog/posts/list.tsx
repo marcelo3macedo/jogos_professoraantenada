@@ -21,9 +21,11 @@ export default function List({
   return (
     <section>
       <div className="grid grid-cols-1 gap-8 mt-4 xl:gap-4 md:grid-cols-2 xl:grid-cols-3">
-        {posts.items.map((p) => (
-          <Item key={p.slug} post={p} />
-        ))}
+        {posts && posts.items ? (
+          posts.items.map((p) => <Item key={p.slug} post={p} />)
+        ) : (
+          <></>
+        )}
       </div>
       <Pagination page={page} total={posts.total} limit={posts.limit} />
     </section>

@@ -32,6 +32,9 @@ export async function getSingleCategory(
   const [totalPosts] = (await queryDatabase(QUERY_CATEGORIES_POSTS_COUNTER, [
     slug,
   ])) as any;
+  items.map((p) => {
+    p.url = `/blog/post/${p.slug}`;
+  });
 
   const { termId, name, description } = category;
   return {

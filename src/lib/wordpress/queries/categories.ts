@@ -1,3 +1,13 @@
+export const QUERY_CATEGORIES_LIST = `
+    SELECT t.term_id as termId,
+           t.name,
+           t.slug
+      FROM wordpress_terms t INNER JOIN
+           wordpress_term_taxonomy tt ON tt.term_id = t.term_id
+     WHERE tt.taxonomy = 'category'
+       ORDER BY t.name
+       LIMIT 30`;
+
 export const QUERY_CATEGORIES_CHILDREN = `
     SELECT t.term_id as termId,
            t.name,

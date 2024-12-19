@@ -1,10 +1,11 @@
+import SingleContent from "@/components/blog/posts/single/content/main";
 import { METADATATYPE_HOME } from "@/constants/metadataType";
 import { getMetadata } from "@/helpers/metadata/metadataHelper";
-import BaseTheme from "@/themes/base.theme";
-import { Props } from "./props";
-import { getSinglePage } from "@/lib/wordpress/page";
 import { htmlStringToArray } from "@/helpers/posts/content";
-import SingleContent from "@/components/blog/posts/single/content/main";
+import { getSinglePage } from "@/lib/wordpress/page";
+import BaseTheme from "@/themes/base.theme";
+
+import { Props } from "./props";
 
 export const metadata = getMetadata(METADATATYPE_HOME);
 

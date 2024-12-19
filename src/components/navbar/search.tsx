@@ -6,7 +6,7 @@ export default function Search() {
       <div className="relative">
         <input
           type="search"
-          className=" w-full md:w-40 block px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent"
+          className=" w-full md:w-64 block px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent"
           placeholder="Buscar..."
           name="s"
         />
